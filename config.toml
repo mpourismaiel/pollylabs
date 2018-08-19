@@ -14,8 +14,7 @@ lastmod = ["lastmod", ":git", "date"]
 googleAnalytics = ""
 
 [params]
-  name = "Okkur Labs"
-  description = "Open Source Theme for your next project"
+  name = "Polly Labs"
 
   [params.style]
     #background = "secondary"
@@ -25,8 +24,6 @@ googleAnalytics = ""
   [params.custom]
     favicon = "favicon.ico"
     favicon_ico_sizes = "16x16 32x32"
-    favicon_png = "favicon.png"
-    favicon_svg = "favicon.svg"
     css = []
     js  = []
 
@@ -47,53 +44,36 @@ googleAnalytics = ""
 # Keep an eye out for updates. These will be moved out to make navbar more
 # configurable.
 [[menu.main]]
-  url = "/"
-  name = "Home"
+  url = "/blog"
+  name = "Blog"
   weight = 10
 
 [[menu.main]]
-  url = "/about"
-  name = "About Us"
+  url = "/partners"
+  name = "Partners"
   weight = 20
 
 [[menu.main]]
-  url = "#contact"
+  url = "/software"
+  name = "Software"
+  weight = 30
+
+[[menu.main]]
+  url = "/publications"
+  name = "Publications"
+  weight = 40
+
+[[menu.main]]
+  url = "/education"
+  name = "Education"
+  weight = 50
+
+[[menu.main]]
+  url = "/awards"
+  name = "Awards"
+  weight = 60
+
+[[menu.main]]
+  url = "/contact"
   name = "Contact"
-  weight = 30
-
-[[menu.footer]]
-  url = "#"
-  name = "Link"
-  weight = 10
-
-[[menu.footer]]
-  url = "#"
-  name = "Long Link"
-  weight = 30
-
-[[menu.footer]]
-  url = "#"
-  name = "Tiny Link"
-  weight = 30
-
-[[menu.copyright_footer]]
-  url = "/about"
-  name = "About Us"
-  weight = 10
-
-[[menu.copyright_footer]]
-  url = "#"
-  name = "Another Link"
-  weight = 30
-
-[[menu.footer_social]]
-  weight = 20
-  name = "facebook"
-  pre = "fab fa-facebook-f"
-  url = "#"
-
-[[menu.footer_social]]
-  weight = 30
-  name = "linkedin"
-  pre = "fab fa-linkedin-in"
-  url = "#"
+  weight = 70
