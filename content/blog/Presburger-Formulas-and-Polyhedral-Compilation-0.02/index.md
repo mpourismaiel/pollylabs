@@ -1,5 +1,6 @@
 ---
 fragment: content
+date: 2016-01-16
 title: Presburger Formulas and Polyhedral Compilation v0.02 tutorial released
 ---
 

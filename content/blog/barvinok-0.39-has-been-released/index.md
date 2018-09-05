@@ -1,5 +1,6 @@
 ---
 fragment: content
+date: 2016-01-16
 title: barvinok 0.39 has been released
 ---
 

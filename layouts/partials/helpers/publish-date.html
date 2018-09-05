@@ -1,0 +1,6 @@
+{{- $date := .root.Date | default .root.Lastmod }}
+<span>
+  <time datetime="{{ $date }}" itemprop="datePublished dateModified">
+    {{- $date.Format ($.site.Params.date_format | default "06 Jan 2006") -}}
+  </time>
+</span>

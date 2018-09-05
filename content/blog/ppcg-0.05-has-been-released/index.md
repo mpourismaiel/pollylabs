@@ -1,5 +1,6 @@
 ---
 fragment: content
+date: 2016-01-16
 title: PPCG 0.05 has been released
 ---
 

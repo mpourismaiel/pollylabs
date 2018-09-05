@@ -1,5 +1,6 @@
 ---
 fragment: content
+date: 2016-01-15
 title: isl 0.16 has been released
 ---
 

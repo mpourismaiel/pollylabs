@@ -1,5 +1,6 @@
 ---
 fragment: content
+date: 2016-01-15
 title: pet 0.08 has been released
 ---
 
