@@ -1,3 +1,0 @@
-+++
-title = "Polly Labs - Blog"
-+++

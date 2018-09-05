@@ -4,4 +4,4 @@ weight = 200
 background = "white"
 +++
 
-**We are hiring. See our [job openings](/jobs.html) for details.**
+**We are hiring. See our [job openings](/jobs) for details.**

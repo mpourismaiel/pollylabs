@@ -5,4 +5,5 @@ headless = true
 
 count = 1000
 title = "Blog"
+display_date = true
 +++
