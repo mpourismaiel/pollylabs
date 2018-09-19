@@ -1,0 +1,276 @@
+@inproceedings{prajapati2017timemodeling,
+ author = {Prajapati, Nirmal and Ranasinghe, Waruna and Rajopadhye, Sanjay and Andonov, Rumen and Djidjev, Hristo and Grosser, Tobias},
+ title = {Simple, Accurate, Analytical Time Modeling and Optimal Tile Size Selection for GPGPU Stencils},
+ booktitle = {Proceedings of the 22Nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+ series = {PPoPP 2017},
+ year = {2017},
+ isbn = {978-1-4503-4493-7},
+ location = {Austin, Texas, USA},
+ pages = {163--177},
+ numpages = {15},
+ url = {http://doi.acm.org/10.1145/3018743.3018744},
+ _authorize={http://dl.acm.org/authorize?N21650},
+ _pdf = {grosser-2017-Simple-Accurate-Analytical-Time-Modeling-and-Optimal-Tile-Size-Selection-for-GPGPU-Stencils.pdf},
+ doi = {10.1145/3018743.3018744},
+ acmid = {3018744},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {analytical models, gpgpu, hybrid hexagonal classic tiling, performance prediction, polyhedral method, stencils},
+ abstract = {Stencil computations are an important class of compute and data
+intensive programs that occur widely in scientific and engineeringapplications.
+A number of tools use sophisticated tiling, parallelization, and memory mapping
+strategies, and generate code that relies on vendor-supplied compilers. This
+code has a number of parameters, such as tile sizes, that are then tuned via
+empirical exploration.
+
+We develop a model that guides such a choice. Our model is a simple set of
+analytical functions that predict the execution time of the generated code. It
+is deliberately optimistic, since tile
+sizes and, moreover, the optimistic assumptions are intended to enable we are
+targeting modeling and parameter selections yielding highly tuned codes.
+
+We experimentally validate the model on a number of 2D and 3D stencil codes,
+and show that the root mean square error in the execution time is less than
+10\% for the subset of the codes that achieve performance within 20\% of the
+best. Furthermore, script, based on using our model, we are able to predict
+tile sizes that achieve a further improvement of 9\% on average.}
+}
+
+@inproceedings{doerfert2017optimistic,
+ author = {Doerfert, Johannes and Grosser, Tobias and Hack, Sebastian},
+ title = {Optimistic Loop Optimization},
+ booktitle = {Proceedings of the 2017 International Symposium on Code Generation and Optimization},
+ series = {CGO 2017},
+ year = {2017},
+ isbn = {978-1-5090-4931-8},
+ location = {Austin, USA},
+ pages = {292--304},
+ numpages = {13},
+ url = {http://dl.acm.org/citation.cfm?id=3049832.3049864},
+ acmid = {3049864},
+ _pdf = {grosser-2017-Optimistic-Loop-Optimization.pdf},
+ _slides = {grosser-2017-Optimistic-Loop-Optimization_slides.pdf},
+ publisher = {IEEE Press},
+ address = {Piscataway, NJ, USA},
+ keywords = {Polyhedral Model, Presburger Precondition, Program Versioning, Static Analysis},
+ abstract = {Compilers use static analyses to justify program optimizations.
+As every optimization must preserve the semantics of the original program,
+static analysis typically fall-back to conservative approximations.
+Consequently, the set of states for which the optimization is invalid is
+overapproximated and potential optimization opportunities are missed. Instead
+of justifying the optimization statically, a compiler can also synthesize
+preconditions that imply the correctness of the optimizations and are checked
+at the runtime of the program.  In this paper, we present a framework to
+collect, generalize, and simplify assumptions based on Presburger arithmetic.
+We introduce different assumptions necessary to enable a variety of complex
+loop transformations and derive a (close to) minimal set of preconditions to
+validate them at runtime. Our evaluation shows that the runtime verification
+introduces negligible overhead and that the assumptions we propose almost
+always hold true. On a large benchmark set including SPEC and NPB our technique
+increases the number of modeled non-trivial loop nests by a factor of 3.9×.}
+}
+
+@inproceedings{kruse18,
+ author = {Kruse, Michael and Grosser, Tobias},
+ title = {DeLICM: Scalar Dependence Removal at Zero Memory Cost},
+ booktitle = {Proceedings of the 2018 IEEE/ACM International Symposium on Code Generation and Optimization},
+ series = {CGO 2018},
+ location = {Vienna, Austria},
+ year = {2018},
+ month = Feb,
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ doi = {10.1145/3168815},
+ url = {http://doi.acm.org/10.1145/3168815},
+ _pdf = {kruse-2018-DeLICM-Scalar-dependence-removal-at-zero-memory-cost.pdf},
+ abstract = {Increasing data movement costs motivate the integration of
+polyhedral loop optimizers in the standard flow (-O3) of production compilers.
+While polyhedral optimizers have been shown to be effective when applied as
+source-to-source transformation, the single static assignment form used in
+modern compiler mid-ends makes such optimizers less effective. Scalar
+dependencies (dependencies carried over a single memory location) are the main
+obstacle preventing effective optimization. We present DeLICM, a set of
+transformations which, backed by a polyhedral value analysis, eliminate
+problematic scalar dependences by 1) relocating scalar memory references to
+unused array locations and by 2) forwarding computations that otherwise cause
+scalar dependences. Our experiments show that DeLICM effectively eliminates
+dependencies introduced by compiler-internal canonicalization passes, human
+programmers, optimizing code generators, or inlining -- without the need for
+any additional memory allocation. As a result, polyhedral loop optimizations
+can be better integrated into compiler pass pipelines which is essential for
+metaprogramming optimization.}
+}
+
+@inproceedings{zinenko2018spatial,
+ author = {Zinenko, Oleksandr and Verdoolaege, Sven and Reddy, Chandan and Shirako, Jun and Grosser, Tobias and Sarkar, Vivek and Cohen, Albert},
+ title = {Modeling the Conflicting Demands of Parallelism and Temporal/Spatial Locality in Affine Scheduling},
+ booktitle = {Proceedings of the 27th International Conference on Compiler Construction},
+ series = {CC 2018},
+ year = {2018},
+ isbn = {978-1-4503-5644-2},
+ location = {Vienna, Austria},
+ pages = {3--13},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/3178372.3179507},
+ doi = {10.1145/3178372.3179507},
+ acmid = {3179507},
+ _pdf = {zinenko-2018-Modeling-Conflicting-Demands-of-Parallelism-And-Temporal-Spatial-Locality-in-Affine-Scheduling.pdf},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Compiler Optimizations, Polyhedral Model},
+ abstract = {The construction of effective loop nest optimizers and
+parallelizers remains challenging despite decades of work in the area. Due to
+the increasing diversity of loop-intensive applications and to the complex
+memory/computation hierarchies in modern processors, optimization heuristics
+are pulled towards conflicting goals, highlighting the lack of a systematic
+approach to optimizing locality and parallelism. Acknowledging these
+conflicting demands on loop nest optimization, we propose an algorithmic
+template capable of modeling the multi-level parallelism and the
+temporal/spatial locality of multiprocessors and accelerators. This algorithmic
+template orchestrates a collection of parameterizable, linear optimization
+problems over a polyhedral space of semantics-preserving transformations. While
+the overall problem is not convex, effective algorithms can be derived from
+this template delivering unprecedented performance portability over GPU and
+multicore CPU. We discuss the rationale for this algorithmic template and
+validate it on representative computational kernels/benchmarks.},
+}
+
+@article{zinenko2018visual,
+ author = {Zinenko, Oleksandr and Huot, St{\'e}phane and Bastoul, C{\'e}dric},
+ title = {Visual Program Manipulation in the Polyhedral Model},
+ journal = {ACM Transactions on Architecture and Code Optimization},
+ issue_date = {April 2018},
+ volume = {15},
+ number = {1},
+ month = mar,
+ year = {2018},
+ issn = {1544-3566},
+ pages = {16:1--16:25},
+ articleno = {16},
+ numpages = {25},
+ url = {http://doi.acm.org/10.1145/3177961},
+ doi = {10.1145/3177961},
+ acmid = {3177961},
+ _pdf = {zinenko-2018-Visual-Program-Manipulation-in-the-Polyhedral-Model.pdf},
+ series = {TACO},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Polyhedral model, direct manipulation},
+ abstract = {Parallelism is one of the key performance sources in modern
+computer systems. When heuristics-based automatic parallelization fails to
+improve performance, a cumbersome and error-prone manual transformation is
+often required. As a solution, we propose an interactive visual approach
+building on the polyhedral model that visualizes exact dependencies and
+parallelism; decomposes and replays a complex automatically computed
+transformation step by step; and allows for directly manipulating the visual
+representation as a means of transforming the program with immediate feedback.
+User studies suggest that our visualization is understood by experts and
+nonexperts alike, and that it may favor an exploratory approach.},
+}
+
+@inproceedings{grosser2016pollyacc,
+ author = {Grosser, Tobias and Hoefler, Torsten},
+ title = {Polly-ACC Transparent Compilation to Heterogeneous Hardware},
+ booktitle = {Proceedings of the 2016 International Conference on Supercomputing},
+ series = {ICS'16},
+ year = {2016},
+ isbn = {978-1-4503-4361-9},
+ location = {Istanbul, Turkey},
+ pages = {1:1--1:13},
+ articleno = {1},
+ numpages = {13},
+ url = {http://doi.acm.org/10.1145/2925426.2926286},
+ doi = {10.1145/2925426.2926286},
+ acmid = {2926286},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Auto-Parallelization, GPGPU, Polyhedral Compilation},
+ _pdf = {grosser-2016-polly-acc-transparent-compilation-to-heterogeneous-hardware.pdf},
+ abstract = {Programming today's increasingly complex heterogeneous hardware is difficult, as it commonly requires the use of data-parallel languages, pragma annotations, specialized libraries, or DSL compilers. Adding explicit accelerator support into a larger code base is not only costly, but also introduces additional complexity that hinders long-term maintenance. We propose a new heterogeneous compiler that brings us closer to the dream of automatic accelerator mapping. Starting from a sequential compiler IR, we automatically generate a hybrid executable that - in combination with a new data management system - transparently offloads suitable code regions. Our approach is almost regression free for a wide range of applications while improving a range of compute kernels as well as two full SPEC CPU applications. We expect our work to reduce the initial cost of accelerator usage and to free developer time to investigate algorithmic changes.}
+} 
+
+
+@article{Grosser:2015:PAG:2807424.2743016,
+ author = {Grosser, Tobias and Verdoolaege, Sven and Cohen, Albert},
+ title = {Polyhedral AST Generation Is More Than Scanning Polyhedra},
+ journal = {ACM Transactions on Programming Languages and Systems (TOPLAS)},
+ issue_date = {August 2015},
+ volume = {37},
+ number = {4},
+ month = jul,
+ year = {2015},
+ issn = {0164-0925},
+ pages = {12:1--12:50},
+ articleno = {12},
+ numpages = {50},
+ url = {http://doi.acm.org/10.1145/2743016},
+ doi = {10.1145/2743016},
+ acmid = {2743016},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Polyhedral compilation, Presburger relations, code generation, index set splitting, unrolling},
+}
+
+@INPROCEEDINGS{7429301,
+author={R. Baghdadi and U. Beaugnon and A. Cohen and T. Grosser and M. Kruse and C. Reddy and S. Verdoolaege and A. Betts and A. F. Donaldson and J. Ketema and J. Absar and S. v. Haastregt and A. Kravets and A. Lokhmotov and R. David and E. Hajiyev},
+booktitle={2015 International Conference on Parallel Architecture and Compilation (PACT)},
+title={PENCIL: A Platform-Neutral Compute Intermediate Language for Accelerator Programming},
+year={2015},
+pages={138-149},
+keywords={application program interfaces;graphics processing units;parallel architectures;parallel programming;program compilers;specification languages;AMD Radeon HD 5670 GPU platform;ARM Mali-T604 GPU platform;CUDA;DSL compilers;DSL embedding scenarios;GNU C99;GPUs;NVIDIA GTX 470 GPU platform;PENCIL-to-OpenCL backend;R9 285 GPU platform;Rodinia suites;SHOC suites;SpearDE;accelerator programming;automatic parallelization;data-dependent control flow;domain specific languages;image processing kernels;linear algebra;low-level APIs;nonaffine array accesses;performance portability;platform-neutral compute intermediate language;polyhedral compiler;portable implementation language;signal processing radar applications;Arrays;Benchmark testing;DSL;Graphics processing units;Image processing;Kernel;Optimization;OpenCL;automatic optimization;domain specific languages;intermediate language;polyhedral model},
+doi={10.1109/PACT.2015.17},
+ISSN={1089-795X},
+month={Oct},}
+
+@inproceedings{Alves:2015:RPD:2814270.2814285,
+ author = {Alves, P{\'e}ricles and Gruber, Fabian and Doerfert, Johannes and Lamprineas, Alexandros and Grosser, Tobias and Rastello, Fabrice and Pereira, Fernando Magno Quint\~{a}o},
+ title = {Runtime Pointer Disambiguation},
+ booktitle = {Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA)},
+ series = {OOPSLA 2015},
+ year = {2015},
+ isbn = {978-1-4503-3689-5},
+ location = {Pittsburgh, PA, USA},
+ pages = {589--606},
+ numpages = {18},
+ url = {http://doi.acm.org/10.1145/2814270.2814285},
+ doi = {10.1145/2814270.2814285},
+ acmid = {2814285},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {Alias analysis, dynamic guards, optimization},
+}
+@inproceedings{Grosser:2015:ODP:2751205.2751248,
+ author = {Grosser, Tobias and Ramanujam, J. and Pouchet, Louis-Noel and Sadayappan, P. and Pop, Sebastian},
+ title = {Optimistic Delinearization of Parametrically Sized Arrays},
+ booktitle = {Proceedings of the 29th ACM on International Conference on Supercomputing},
+ series = {ICS '15},
+ year = {2015},
+ isbn = {978-1-4503-3559-1},
+ location = {Newport Beach, California, USA},
+ pages = {351--360},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/2751205.2751248},
+ doi = {10.1145/2751205.2751248},
+ acmid = {2751248},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {linear memory layout, multi-dimensional arrays, polyhedral analysis},
+}
+
+@inproceedings{Gysi:2015:MDA:2751205.2751223,
+ author = {Gysi, Tobias and Grosser, Tobias and Hoefler, Torsten},
+ title = {MODESTO: Data-centric Analytic Optimization of Complex Stencil Programs on Heterogeneous Architectures},
+ booktitle = {Proceedings of the 29th ACM on International Conference on Supercomputing},
+ series = {ICS '15},
+ year = {2015},
+ isbn = {978-1-4503-3559-1},
+ location = {Newport Beach, California, USA},
+ pages = {177--186},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/2751205.2751223},
+ doi = {10.1145/2751205.2751223},
+ acmid = {2751223},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {fusion, heterogeneous systems, performance model, stencil, tiling},
+}

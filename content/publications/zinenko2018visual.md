@@ -1,0 +1,25 @@
++++
+fragment = "content"
+_pdf = "zinenko-2018-Visual-Program-Manipulation-in-the-Polyhedral-Model.pdf"
+acmid = "3177961"
+address = "New York, NY, USA"
+articleno = "16"
+author = "Zinenko, Oleksandr and Huot, Stephane and Bastoul, Cedric"
+doi = "10.1145/3177961"
+issn = "1544-3566"
+issue_date = "April 2018"
+journal = "ACM Transactions on Architecture and Code Optimization"
+keywords = "Polyhedral model, direct manipulation"
+month = "a"
+number = "1"
+numpages = "25"
+pages = "16:1--16:25"
+publisher = "ACM"
+series = "TACO"
+title = "Visual Program Manipulation in the Polyhedral Model"
+_url = "http://doi.acm.org/10.1145/3177961"
+volume = "15"
+year = "2018"
++++
+
+Parallelism is one of the key performance sources in moderncomputer systems. When heuristics-based automatic parallelization fails toimprove performance, a cumbersome and error-prone manual transformation isoften required. As a solution, we propose an interactive visual approachbuilding on the polyhedral model that visualizes exact dependencies andparallelism; decomposes and replays a complex automatically computedtransformation step by step; and allows for directly manipulating the visualrepresentation as a means of transforming the program with immediate feedback.User studies suggest that our visualization is understood by experts andnonexperts alike, and that it may favor an exploratory approach.},
