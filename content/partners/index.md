@@ -1,3 +1,4 @@
 +++
-title = "Polly Labs - Partners"
+fragment = "content"
+title = "Partners"
 +++

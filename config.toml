@@ -5,6 +5,7 @@ title = "Okkur - Syna"
 theme = "syna"
 enableGitInfo = true
 version = "0.11.0"
+paginate = 10
 
 [frontmatter]
 date = ["date", "lastmod"]
@@ -25,7 +26,7 @@ googleAnalytics = ""
     favicon = "favicon.ico"
     favicon_ico_sizes = "16x16 32x32"
     css = []
-    js  = []
+    js = []
 
   # Piwik tracking
   [params.analytics.piwik]
@@ -77,3 +78,8 @@ googleAnalytics = ""
   url = "/contact"
   name = "Contact"
   weight = 70
+
+[[menu.copyright_footer]]
+  url = "/contact"
+  name = "Contact Us"
+  weight = 10
